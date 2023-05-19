@@ -1,113 +1,182 @@
 import Image from 'next/image'
+import Svg1 from '../../public/images/bg.svg'
+import Logo from '../../public/images/logo.png'
+import Mobile1 from '../../public/images/mobile1.svg'
+import Mobile2 from '../../public/images/mobile2.png'
+import first1 from '../../public/images/1/1-1.svg'
+import first2 from '../../public/images/1/1-2.svg'
+import first3 from '../../public/images/1/1-3.svg'
+import first4 from '../../public/images/1/1-4.svg'
+import second1 from '../../public/images/2/2-1.svg'
+import second2 from '../../public/images/2/2-2.svg'
+import second3 from '../../public/images/2/2-3.svg'
+import third1 from '../../public/images/3/3-1.svg'
+import third2 from '../../public/images/3/3-2.svg'
+import third3 from '../../public/images/3/3-3.svg'
+import { Open_Sans } from 'next/font/google'
+import { RiDownloadLine } from 'react-icons/ri'
+import { FaApple } from 'react-icons/fa'
+import { BsAndroid2 } from 'react-icons/bs'
+
+const open_sans = Open_Sans({
+    weight: ['300', '400', '500', '600', '700', '800'],
+    subsets: ['latin']
+})
+
+const firstData = [
+    {
+        image: first1,
+        title: 'Arena',
+        text: 'Explore and customise your timeline to enjoy the Qatapolt experience. This is essentially the ‘Home’ button.'
+    },
+    {
+        image: first2,
+        title: 'Message',
+        text: 'Communicate with other users with our private message feature. Take advantage of the group chat feature where you can speak with multiple users in the same chat. '
+    },
+    {
+        image: first3,
+        title: 'Profile',
+        text: 'Keep track of your favourite players via a private watchlist that only you can see. This feature was heavily requested by scouts and agents, so their peers are unable to scope out their findings.'
+    },
+    {
+        image: first4,
+        title: 'Watchlist',
+        text: 'This is your blank canvas to paint a picture that lets other users into your world. Your profile page will store all of your posts and allow you to edit your profile picture, bio, etc. '
+    },
+]
+
+const secondData = [
+    {
+        image: second1,
+        title: 'Medal',
+        text: 'If you like the content then you should give out a medal! This is essentially the ‘Like’ button.'
+    },
+    {
+        image: second2,
+        title: 'Trophy',
+        text: 'A trophy is used to signify a verified user. This is equivalent to a ‘Verification Tick‘'
+    },
+    {
+        image: second3,
+        title: 'Free Agents',
+        text: 'When one door closes, another opens. The ideal platform to create new opportunities after you have parted ways with a professional club / organization.'
+    },
+
+]
+const thirdData = [
+    {
+        image: third1,
+        title: 'Advanced Search',
+        text: 'This will help you to find exactly who or what you are looking for within our app.'
+    },
+    {
+        image: third2,
+        title: 'Qatapolt News',
+        text: 'Keep track of our news page to stay in the loop for our latest updates for the Qatapolt Community.'
+    },
+    {
+        image: third3,
+        title: 'Live Scores',
+        text: 'Stay updated with the live scores from top leagues across the world such as the English Premier League.'
+    },
+
+]
+
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    return (
+        <div className='mb-20'>
+            <div className='relative'>
+                {/* <Image src={Svg1} alt='svg' className='md:w-full absolute top-0 left-0' /> */}
+                <div className='relative z-30 bg_image pb-28'>
+                    <div className='xl:w-[1200px] w-[90%] m-auto'>
+                        <div className='sm:pt-10 pt-5'>
+                            <Image src={Logo} alt='logo' className='sm:w-[120px] w-[100px]' />
+                        </div>
+                        <div className={`sm:flex block justify-between items-center gap-10 sm:mt-0 mt-10`}>
+                            <div className='md:w-1/2 sm:w-2/3 w-full'>
+                                <h1 className={`lg:text-4xl md:text-2xl text-lg sm:text-left text-center text-white font-semibold calibri`}>Awesome app Landing  Page</h1>
+                                <p className={`lg:text-lg md:text-base text-sm sm:text-left text-center md:mt-3 mt-2 text-white calibri`}>
+                                    Qatapolt is the first social media app that is dedicated to turning dreams into reality within sport. Athletes can show their talent and get discovered by agents, scouts, clubs, etc.
+                                </p>
+                                <p className={`lg:text-lg md:text-base text-sm sm:text-left text-center md:mt-3 mt-2 text-white calibri`}>
+                                    Qatapolt is also impeccable for sports fans because you can connect with your favourite athletes and other fans to discuss the latest in sport.
+                                </p>
+                                <div className='flex gap-3 items-center sm:justify-start justify-center md:mt-10 mt-5'>
+                                    <button className='flex items-center rounded-2xl text-lg font-bold pl-3 bg-white gap-2 h-[45px] w-[150px] calibri'><RiDownloadLine size={15} /> Download</button>
+                                    <FaApple size={35} className='text-white' />
+                                    <BsAndroid2 size={30} className='text-white' />
+                                </div>
+                            </div>
+                            <div className='md:w-1/2 sm:w-1/3 w-full flex justify-center'>
+                                <Image src={Mobile1} alt='mobile1' className='xl:w-[50%] md:w-[40%] sm:w-[70%] w-[200px] sm:mt-0 mt-5' />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-4 xs:grid-cols-2 grid-cols-1 lg:gap-20 gap-10 md:mt-15 mt-10'>
+                {
+                    firstData.map((val, index) => {
+                        return (
+                            <div key={index} className={`py-5 px-8 bg-[#F4F4F5] box_shadow ${open_sans.className}`}>
+                                <Image src={val.image} alt='image' className='w-[60px] m-auto' />
+                                <h1 className='text-xl font-semibold text-center mt-2 text-[#231F20]'>{val.title}</h1>
+                                <p className='text-[#595A5A] text-sm text-center mt-1'>{val.text}</p>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+            <div className={`sm:w-[600px] w-[90%] m-auto mt-28 ${open_sans.className}`}>
+                <h1 className='text-2xl text-[#231F20] text-center font-semibold'>Qatapolt Features</h1>
+                <p className='text-[#595A5A] text-center text-lg mt-1'>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing  elit, sed do eiusmod tempor
+                    incididunt ut abore et vdolore magna aliqua.
+                </p>
+            </div>
+
+            <div className={`xl:w-[1200px] w-[90%] m-auto mt-16 grid lg:grid-cols-3 gap-10 items-center ${open_sans.className}`}>
+                <div className='flex flex-col gap-14'>
+                    {
+                        secondData.map((val, index) => {
+                            return (
+                                <div key={index} className='flex gap-7'>
+                                    <div className='w-[60px] h-[50px] shrink-0 flex justify-center items-center bg-[#0C3933]'>
+                                        <Image src={val.image} alt='image' className='w-[30px]' />
+                                    </div>
+                                    <div>
+                                        <h1 className='text-[#231F20] text-lg font-semibold'>{val.title}</h1>
+                                        <p className='text-[#595A5A] text-sm mt-1'>{val.text}</p>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+                <div className='flex justify-center'>
+                    <Image src={Mobile2} alt='mobile' className='lg:w-[60%] sm:w-[250px] w-[200px]' />
+                </div>
+                <div className={`flex flex-col gap-14 ${open_sans.className}`}>
+                    {
+                        thirdData.map((val, index) => {
+                            return (
+                                <div key={index} className='flex gap-7'>
+                                    <div className='w-[60px] h-[50px] shrink-0 flex justify-center items-center bg-[#0C3933]'>
+                                        <Image src={val.image} alt='image' className='w-[30px]' />
+                                    </div>
+                                    <div>
+                                        <h1 className='text-[#231F20] text-lg font-semibold'>{val.title}</h1>
+                                        <p className='text-[#595A5A] text-sm mt-1'>{val.text}</p>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    )
 }
