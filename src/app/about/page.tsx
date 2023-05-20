@@ -1,12 +1,17 @@
 import Image from 'next/image';
 import React from 'react';
-import Logo from '../../../public/images/logo.png'
 import forth1 from '../../../public/images/4/4-1.png'
 import forth2 from '../../../public/images/4/4-2.svg'
 import forth3 from '../../../public/images/4/4-3.svg'
+import fifth1 from '../../../public/images/5/5-1.png'
+import { GoTelescope } from 'react-icons/go'
+import fifth3 from '../../../public/images/5/5-3.png'
+import fifth4 from '../../../public/images/5/5-4.png'
+import fifth5 from '../../../public/images/5/5-5.png'
 import Comma from '../../../public/images/comma.png'
 import Man from '../../../public/images/man.svg'
 import { Open_Sans } from 'next/font/google';
+import Header from '@/components/header';
 
 const open_sans = Open_Sans({
     weight: ['300', '400', '500', '600', '700', '800'],
@@ -57,13 +62,45 @@ function Page() {
         },
     ]
 
+    const fifthData = [
+        {
+            image: fifth1,
+            text: 'Connect With Others',
+            type: 'image'
+        },
+        {
+            image: <GoTelescope size={50} className='text-[#0C6554]' /> as any,
+            text: 'Get Discovered',
+            type: 'icon'
+
+        },
+        {
+            image: fifth3,
+            text: 'Find New Players',
+            type: 'image'
+
+        },
+        {
+            image: fifth4,
+            text: 'Show Your Talent',
+            type: 'image'
+
+        },
+        {
+            image: fifth5,
+            text: 'Talk  About Sports',
+            type: 'image'
+
+        },
+    ]
+
 
     return (
-        <div className={`${open_sans.className}`}>
+        <div className={`${open_sans.className} mb-10`}>
             <div className='bg_image2 md:pb-52 pb-40'>
                 <div className='xl:w-[1200px] w-[90%] m-auto '>
-                    <div className='sm:pt-20 pt-5'>
-                        <Image src={Logo} alt='logo' className='sm:w-[120px] w-[100px]' />
+                    <div className='sm:pt-14 pt-5'>
+                        <Header />
                     </div>
                     <div className={`md:w-[70%] xs:w-[90%] w-full xs:flex block m-auto md:mt-60 mt-52`}>
                         <input type="text" placeholder='Enter your email address' className='text-[#1C2824] placeholder:text-[#1C2824] placeholder:font-semibold xs:py-5 py-3 px-5 flex-grow w-full' />
@@ -71,7 +108,7 @@ function Page() {
                     </div>
                 </div>
             </div>
-            <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-3 xs:grid-cols-2 grid-cols-1 lg:gap-24 gap-10 md:mt-10 mt-5'>
+            {/* <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-3 xs:grid-cols-2 grid-cols-1 lg:gap-24 gap-10 md:mt-10 mt-5'>
                 {
                     firstData.map((val, index) => {
                         return (
@@ -83,16 +120,35 @@ function Page() {
                         )
                     })
                 }
+            </div> */}
+            <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-5 xs:grid-cols-2 grid-cols-1 lg:gap-10 gap-5 md:mt-10 mt-5'>
+                {
+                    fifthData.map((val, index) => {
+                        return (
+                            <div key={index} className={`py-5 px-8 bg-white box_shadow`}>
+                                <div className='flex justify-center items-center'>
+                                    {
+                                        val.type === 'image' ?
+                                            <Image src={val.image} alt='image' className='w-[50px]' />
+                                            :
+                                            val.image
+                                    }
+                                </div>
+                                <h1 className='font-semibold mt-5 text-[#231F20] text-center'>{val.text}</h1>
+                            </div>
+                        )
+                    })
+                }
             </div>
-            <div className={`sm:w-[600px] w-[90%] m-auto mt-28`}>
+            {/* <div className={`sm:w-[600px] w-[90%] m-auto mt-28`}>
                 <h1 className='text-3xl text-[#231F20] text-center font-semibold'>10k+ Experts Trust Us</h1>
                 <p className='text-[#595A5A] text-center text-lg mt-10'>
                     Lorem ipsum dolor sit amet, consectetur
                     adipiscing  elit, sed do eiusmod tempor
                     incididunt ut abore et vdolore magna aliqua.
                 </p>
-            </div>
-            <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-2 grid-cols-1 lg:gap-24 gap-7 md:mt-15 mt-10'>
+            </div> */}
+            <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-2 grid-cols-1 lg:gap-24 gap-7 md:mt-32 mt-20'>
                 {
                     secondData.map((val, index) => {
                         return (
