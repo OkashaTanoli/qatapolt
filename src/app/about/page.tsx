@@ -104,7 +104,7 @@ function Page() {
                     </div>
                     <div className={`md:w-[70%] xs:w-[90%] w-full xs:flex block m-auto md:mt-60 mt-52`}>
                         <input type="text" placeholder='Enter your email address' className='text-[#1C2824] placeholder:text-[#1C2824] placeholder:font-semibold xs:py-5 py-3 px-5 flex-grow w-full' />
-                        <button className={`bg-[#1C2824] xs:mt-0 mt-3 xs:py-5 py-3 xs:w-[200px] w-full text-white`}>SUBSCRIBE</button>
+                        <button className={`bg-[#CE9F3B] xs:mt-0 mt-3 xs:py-5 py-3 xs:w-[200px] w-full text-white`}>SUBSCRIBE</button>
                     </div>
                 </div>
             </div>

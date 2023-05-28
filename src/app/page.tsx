@@ -43,7 +43,7 @@ const firstData = [
     {
         image: first4,
         title: 'Watchlist',
-        text: 'This is your blank canvas to paint a picture that lets other users into your world. Your profile page will store all of your posts and allow you to edit your profile picture, bio, etc. '
+        text: "This is your blank canvas to paint a picture that let's other users into your world. Your profile page will store all of your posts and allow you to edit your profile picture, bio, etc. "
     },
 ]
 
@@ -56,7 +56,7 @@ const secondData = [
     {
         image: second2,
         title: 'Trophy',
-        text: 'A trophy is used to signify a verified user. This is equivalent to a ‘Verification Tick‘'
+        text: 'A trophy is used to signify a verified user. This is equivalent to a ‘Verification Tick’.'
     },
     {
         image: second3,
@@ -88,7 +88,7 @@ const thirdData = [
 const about = [
     {
         title: 'Executive Summary',
-        text: 'Qatapolt is the first social media app that is dedicated to turning dreams into reality within sport. Athletes will be able to put themselves in the “shop window” on Qatapolt in a similar fashion to Justin Bieber launching a successful music career with the aid of YouTube. Prior to global success, Mo Salah would travel for 9 hours to get to training and Sadio Mane took a secret flight to France to attend a trial. This would all be eradicated with Qatapolt.'
+        text: 'Qatapolt is a social media app that is truly dedicated to turning dreams into reality within sport. Athletes will be able to put themselves in the “shop window” on Qatapolt in a similar fashion to Justin Bieber launching a successful music career with the aid of YouTube. Prior to global success, Mo Salah would travel for 9 hours to get to training and Sadio Mane took a secret flight to France to attend a trial. This would all be eradicated with Qatapolt.'
     },
     {
         title: 'Objectives ',
@@ -112,12 +112,12 @@ export default function Home() {
                         </div>
                         <div className={`sm:flex block justify-between items-center gap-10 sm:mt-0 mt-10`}>
                             <div className='md:w-1/2 sm:w-2/3 w-full'>
-                                <h1 className={`lg:text-4xl md:text-2xl text-lg sm:text-left text-center text-white font-semibold calibri`}>Awesome app Landing  Page</h1>
+                                <h1 className={`lg:text-4xl md:text-2xl text-lg sm:text-left text-center text-white font-semibold calibri`}>Create Your Own Luck</h1>
                                 <p className={`lg:text-lg md:text-base text-sm sm:text-left text-center md:mt-3 mt-2 text-white calibri`}>
-                                    Qatapolt is the first social media app that is dedicated to turning dreams into reality within sport. Athletes can show their talent and get discovered by agents, scouts, clubs, etc.
+                                    Qatapolt is a social media app that is truly dedicated to turning dreams into reality within sport. Athletes can show their talent and get discovered by agents, scouts, clubs, etc.
                                 </p>
                                 <p className={`lg:text-lg md:text-base text-sm sm:text-left text-center md:mt-3 mt-2 text-white calibri`}>
-                                    Qatapolt is also impeccable for sports fans because you can connect with your favourite athletes and other fans to discuss the latest in sport.
+                                    Qatapolt is also impeccable for sports fans because you can connect with your favorite athletes and other fans to discuss the latest in sport.
                                 </p>
                                 <div className='flex gap-3 items-center sm:justify-start justify-center md:mt-10 mt-5'>
                                     <button className='flex items-center rounded-2xl text-lg font-bold pl-3 bg-white gap-2 h-[45px] w-[150px] calibri'><RiDownloadLine size={15} /> Download</button>
@@ -147,7 +147,7 @@ export default function Home() {
             </div>
 
             <div className={`xl:w-[1200px] w-[90%] m-auto my-32 ${open_sans.className}`}>
-                <h1 className='text-3xl text-[#231F20] font-bold text-center'>About US</h1>
+                <h1 className='text-3xl text-[#231F20] font-bold text-center underline'>About Us</h1>
                 <div className='lg:flex block items-center gap-10 mt-14'>
                     <div className='lg:w-[55%] w-full'>
                         {
