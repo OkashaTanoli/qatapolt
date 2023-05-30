@@ -3,16 +3,11 @@
 @tailwind utilities;
 
 
-@font-face {
-  font-family: 'calibri';
-  src: url('/src/lib/Calibri/Calibri.ttf');
-  /* You can include additional font file formats for better cross-browser support */
+
+.linearGradient {
+  @apply bg-gradient-to-t from-[#C99D3E] via-[#DEC476] to-[#EAD996]
 }
 
-
-.calibri {
-  font-family: calibri;
-}
 
 .bg_image {
   background-image: url(../../public/images/bg.svg);

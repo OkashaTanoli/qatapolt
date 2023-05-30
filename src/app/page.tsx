@@ -16,13 +16,24 @@ import { Open_Sans } from 'next/font/google'
 import { RiDownloadLine } from 'react-icons/ri'
 import { FaApple } from 'react-icons/fa'
 import { BsAndroid2 } from 'react-icons/bs'
+import fifth1 from '../../public/images/5/5-1.png'
+import { GoTelescope } from 'react-icons/go'
+import fifth3 from '../../public/images/5/5-3.png'
+import fifth4 from '../../public/images/5/5-4.png'
+import fifth5 from '../../public/images/5/5-5.png'
+import Comma from '../../public/images/comma.png'
+import Man from '../../public/images/man.svg'
 import Link from 'next/link'
+import localFont from 'next/font/local';
 import Header from '@/components/header'
 
 const open_sans = Open_Sans({
     weight: ['300', '400', '500', '600', '700', '800'],
     subsets: ['latin']
 })
+const visbycf = localFont({ src: '../lib/Demo_Fonts/Fontspring-DEMO-visbycf-bold.otf' });
+const calibri = localFont({ src: '../lib/Calibri/Calibri.ttf' });
+
 
 const firstData = [
     {
@@ -100,6 +111,64 @@ const about = [
     }
 ]
 
+const fifthData = [
+    {
+        image: fifth1,
+        text: 'Connect With Others',
+        type: 'image'
+    },
+    {
+        image: <GoTelescope size={50} className='text-[#0C6554]' /> as any,
+        text: 'Get Discovered',
+        type: 'icon'
+
+    },
+    {
+        image: fifth3,
+        text: 'Find New Players',
+        type: 'image'
+
+    },
+    {
+        image: fifth4,
+        text: 'Show Your Talent',
+        type: 'image'
+
+    },
+    {
+        image: fifth5,
+        text: 'Talk  About Sports',
+        type: 'image'
+
+    },
+]
+
+
+
+const AboutSecondData = [
+    {
+        image: Comma,
+        text: 'SCOUT: I used to travel up North on cold rainy days just to be disappointed by a player I heard about through the grapevine. With Qatapolt I can make an informed judgment from the videos players post on their profiles before leaving my house!'
+    },
+    {
+        image: Comma,
+        text: 'PLAYER: My parents can’t afford to pay the weekly fees from my local team so it was hard to get seen before. I got my friends to film clips from my school football games to put on Qatapolt and I have been offered trials from two professional teams already! '
+    },
+]
+
+
+const AboutThirdData = [
+    {
+        image: Man,
+        name: 'Waqas Abbas',
+        profession: 'Designer'
+    },
+    {
+        image: Man,
+        name: 'Umair Abbas',
+        profession: 'Developer'
+    },
+]
 
 export default function Home() {
     return (
@@ -112,15 +181,15 @@ export default function Home() {
                         </div>
                         <div className={`sm:flex block justify-between items-center gap-10 sm:mt-0 mt-10`}>
                             <div className='md:w-1/2 sm:w-2/3 w-full'>
-                                <h1 className={`lg:text-4xl md:text-2xl text-lg sm:text-left text-center text-white font-semibold calibri`}>Create Your Own Luck</h1>
-                                <p className={`lg:text-lg md:text-base text-sm sm:text-left text-center md:mt-3 mt-2 text-white calibri`}>
+                                <h1 className={`lg:text-5xl md:text-3xl text-xl text-center text-white ${visbycf.className}`}>Create Your Own Luck</h1>
+                                <p className={`lg:text-lg md:text-base text-sm sm:text-left text-center md:mt-3 mt-2 text-white ${calibri.className}`}>
                                     Qatapolt is a social media app that is truly dedicated to turning dreams into reality within sport. Athletes can show their talent and get discovered by agents, scouts, clubs, etc.
                                 </p>
-                                <p className={`lg:text-lg md:text-base text-sm sm:text-left text-center md:mt-3 mt-2 text-white calibri`}>
+                                <p className={`lg:text-lg md:text-base text-sm sm:text-left text-center md:mt-3 mt-2 text-white ${calibri.className}`}>
                                     Qatapolt is also impeccable for sports fans because you can connect with your favorite athletes and other fans to discuss the latest in sport.
                                 </p>
                                 <div className='flex gap-3 items-center sm:justify-start justify-center md:mt-10 mt-5'>
-                                    <button className='flex items-center rounded-2xl text-lg font-bold pl-3 bg-white gap-2 h-[45px] w-[150px] calibri'><RiDownloadLine size={15} /> Download</button>
+                                    <button className={`flex items-center rounded-2xl text-lg font-bold pl-3 linearGradient gap-2 h-[45px] w-[150px] ${calibri.className}`}><RiDownloadLine size={15} /> Download</button>
                                     <FaApple size={35} className='text-white' />
                                     <BsAndroid2 size={30} className='text-white' />
                                 </div>
@@ -132,7 +201,13 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-4 xs:grid-cols-2 grid-cols-1 lg:gap-10 gap-5 md:mt-15 mt-10'>
+            <div className='xl:w-[1200px] w-[90%] m-auto md:mt-20 mt-10'>
+                <div className={`md:w-[70%] xs:w-[90%] w-full xs:flex block border-8 border-[#517570] mt-10`}>
+                    <input type="text" placeholder='Enter your email address' className='text-[#1C2824] border border-zinc-300 placeholder:text-[#1C2824] placeholder:font-semibold xs:py-5 py-3 px-5 flex-grow w-full' />
+                    <button className={`linearGradient xs:mt-0 mt-3 xs:py-5 py-3 xs:w-[200px] w-full text-white`}>SUBSCRIBE</button>
+                </div>
+            </div>
+            <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-4 xs:grid-cols-2 grid-cols-1 lg:gap-10 gap-5 md:mt-28 mt-10'>
                 {
                     firstData.map((val, index) => {
                         return (
@@ -146,38 +221,9 @@ export default function Home() {
                 }
             </div>
 
-            <div className={`xl:w-[1200px] w-[90%] m-auto my-32 ${open_sans.className}`}>
-                <h1 className='text-3xl text-[#231F20] font-bold text-center underline'>About Us</h1>
-                <div className='lg:flex block items-center gap-10 mt-14'>
-                    <div className='lg:w-[55%] w-full'>
-                        {
-                            about.map((val, index) => {
-                                return (
-                                    <div key={index} className='mb-7'>
-                                        <h1 className='text-xl text-[#231F20] font-semibold'>{val.title}</h1>
-                                        <p className='text-[#595A5A] text-sm mt-2'>{val.text}</p>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
-                    <div className='w-[45%] lg:flex hidden justify-center'>
-                        <Image src={Mobile1} alt='image' className='w-[60%]' />
-                    </div>
-                </div>
-            </div>
 
 
-            {/* <div className={`sm:w-[600px] w-[90%] m-auto mt-20 ${open_sans.className}`}>
-                <h1 className='text-2xl text-[#231F20] text-center font-semibold'>Qatapolt Features</h1>
-                <p className='text-[#595A5A] text-center text-lg mt-1'>
-                    Lorem ipsum dolor sit amet, consectetur
-                    adipiscing  elit, sed do eiusmod tempor
-                    incididunt ut abore et vdolore magna aliqua.
-                </p>
-            </div> */}
-
-            <div className={`xl:w-[1200px] w-[90%] m-auto mt-16 grid lg:grid-cols-3 gap-10 items-center ${open_sans.className}`}>
+            <div className={`xl:w-[1200px] w-[90%] m-auto mt-28 grid lg:grid-cols-3 gap-10 items-center ${open_sans.className}`}>
                 <div className='flex flex-col gap-14'>
                     {
                         secondData.map((val, index) => {
@@ -215,6 +261,79 @@ export default function Home() {
                         })
                     }
                 </div>
+            </div>
+
+
+
+            <div className={`xl:w-[1200px] w-[90%] m-auto my-32 ${open_sans.className}`}>
+                <h1 className='text-3xl text-[#231F20] font-bold text-center underline'>About Us</h1>
+                <div className='lg:flex block items-center gap-10 mt-14'>
+                    <div className='lg:w-[55%] w-full'>
+                        {
+                            about.map((val, index) => {
+                                return (
+                                    <div key={index} className='mb-7'>
+                                        <h1 className='text-xl text-[#231F20] font-semibold'>{val.title}</h1>
+                                        <p className='text-[#595A5A] text-sm mt-2'>{val.text}</p>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                    <div className='w-[45%] lg:flex hidden justify-center'>
+                        <Image src={Mobile1} alt='image' className='w-[60%]' />
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-5 xs:grid-cols-2 grid-cols-1 lg:gap-10 gap-5 md:mt-28 mt-10'>
+                {
+                    fifthData.map((val, index) => {
+                        return (
+                            <div key={index} className={`py-5 px-8 bg-white box_shadow`}>
+                                <div className='flex justify-center items-center'>
+                                    {
+                                        val.type === 'image' ?
+                                            <Image src={val.image} alt='image' className='w-[50px]' />
+                                            :
+                                            val.image
+                                    }
+                                </div>
+                                <h1 className='font-semibold mt-5 text-[#231F20] text-center'>{val.text}</h1>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+            <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-2 grid-cols-1 lg:gap-24 gap-7 md:mt-32 mt-20'>
+                {
+                    AboutSecondData.map((val, index) => {
+                        return (
+                            <div key={index} className={`py-5 px-8 bg-[#F9F9FA] box_shadow`}>
+                                <Image src={val.image} alt='image' className='w-[30px] drop_shadow' />
+                                <p className='text-[#595A5A] w-[80%] m-auto text-center'>{val.text}</p>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+            <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-2 grid-cols-1 lg:gap-14 gap-7 md:mt-15 mt-10'>
+                {
+                    AboutThirdData.map((val, index) => {
+                        return (
+                            <div key={index} className={`py-5 px-8 flex items-center`}>
+                                <Image src={val.image} alt='image' className='w-[100px] drop_shadow' />
+                                <div className='w-[150px]'>
+                                    <p className='text-[#231F20] font-semibold w-[80%] m-auto text-center'>{val.name}</p>
+                                    <p className='text-[#595A5A] w-[80%] m-auto text-center'>{val.profession}</p>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </div>
     )
