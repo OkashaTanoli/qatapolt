@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Svg1 from '../../public/images/bg.svg'
-import Mobile1 from '../../public/images/mobile1.svg'
+import Mobile1 from '../../public/images/mobile1.png'
 import Mobile2 from '../../public/images/mobile2.png'
 import first1 from '../../public/images/1/1-1.svg'
 import first2 from '../../public/images/1/1-2.svg'
