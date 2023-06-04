@@ -175,17 +175,17 @@ export default function Home() {
         <div className='mb-20'>
             <div className='relative'>
                 <div className='relative z-30 bg_image pb-28'>
-                    <div className='xl:w-[1200px] w-[90%] m-auto'>
+                    <div className='2xl:w-[1500px] xl:w-[1300px] w-[90%] m-auto'>
                         <div className='sm:pt-10 pt-5'>
                             <Header />
                         </div>
                         <div className={`sm:flex block justify-between items-center gap-10 sm:mt-0 mt-10`}>
                             <div className='md:w-1/2 sm:w-2/3 w-full'>
-                                <h1 className={`lg:text-5xl md:text-3xl text-xl text-center text-white ${visbycf.className}`}>Create Your Own Luck</h1>
-                                <p className={`lg:text-lg md:text-base text-sm sm:text-left text-center md:mt-3 mt-2 text-white ${calibri.className}`}>
+                                <h1 className={`2xl:text-6xl lg:text-5xl md:text-3xl text-xl text-center text-white ${visbycf.className}`}>Create Your Own Luck</h1>
+                                <p className={`2xl:text-[21px] lg:text-lg md:text-base text-sm sm:text-left text-center md:mt-3 mt-2 text-white ${calibri.className}`}>
                                     Qatapolt is a social media app that is truly dedicated to turning dreams into reality within sport. Athletes can show their talent and get discovered by agents, scouts, clubs, etc.
                                 </p>
-                                <p className={`lg:text-lg md:text-base text-sm sm:text-left text-center md:mt-3 mt-2 text-white ${calibri.className}`}>
+                                <p className={`2xl:text-[21px] lg:text-lg md:text-base text-sm sm:text-left text-center md:mt-3 mt-2 text-white ${calibri.className}`}>
                                     Qatapolt is also impeccable for sports fans because you can connect with your favorite athletes and other fans to discuss the latest in sport.
                                 </p>
                                 <div className='flex gap-3 items-center sm:justify-start justify-center md:mt-10 mt-5'>
@@ -201,20 +201,20 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className='xl:w-[1200px] w-[90%] m-auto md:mt-20 mt-10'>
-                <div className={`md:w-[70%] xs:w-[90%] w-full xs:flex block border-8 border-[#517570] mt-10`}>
+            <div className='2xl:w-[1500px] xl:w-[1300px] w-[90%] m-auto md:mt-20 mt-10'>
+                <div className={`md:w-[70%] xs:w-[90%] mx-auto w-full xs:flex block border-8 border-[#517570] mt-10`}>
                     <input type="text" placeholder='Enter your email address' className='text-[#1C2824] border border-zinc-300 placeholder:text-[#1C2824] placeholder:font-semibold xs:py-5 py-3 px-5 flex-grow w-full' />
                     <button className={`linearGradient xs:mt-0 mt-3 xs:py-5 py-3 xs:w-[200px] w-full text-white`}>SUBSCRIBE</button>
                 </div>
             </div>
-            <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-4 xs:grid-cols-2 grid-cols-1 lg:gap-10 gap-5 md:mt-28 mt-10'>
+            <div className='2xl:w-[1500px] xl:w-[1300px] w-[90%] m-auto grid md:grid-cols-4 xs:grid-cols-2 grid-cols-1 lg:gap-10 gap-5 md:mt-28 mt-10'>
                 {
                     firstData.map((val, index) => {
                         return (
                             <div key={index} className={`py-5 px-5 bg-[#F4F4F5] box_shadow ${open_sans.className}`}>
-                                <Image src={val.image} alt='image' className='w-[60px] m-auto' />
-                                <h1 className='text-xl font-semibold text-center mt-2 text-[#231F20]'>{val.title}</h1>
-                                <p className='text-[#595A5A] text-sm text-center mt-1'>{val.text}</p>
+                                <Image src={val.image} alt='image' className='2xl:w-[70px] w-[60px] m-auto' />
+                                <h1 className='2xl:text-[23px] text-xl font-semibold text-center 2xl:mt-4 mt-2 text-[#231F20]'>{val.title}</h1>
+                                <p className='text-[#595A5A] 2xl:text-base text-sm text-center 2xl:mt-2 mt-1'>{val.text}</p>
                             </div>
                         )
                     })
@@ -223,18 +223,18 @@ export default function Home() {
 
 
 
-            <div className={`xl:w-[1200px] w-[90%] m-auto mt-28 grid lg:grid-cols-3 gap-10 items-center ${open_sans.className}`}>
+            <div className={`2xl:w-[1500px] xl:w-[1300px] w-[90%] m-auto mt-28 grid lg:grid-cols-3 gap-10 items-center ${open_sans.className}`}>
                 <div className='flex flex-col gap-14'>
                     {
                         secondData.map((val, index) => {
                             return (
                                 <div key={index} className='flex items-start gap-7'>
-                                    <div className='w-[70px] h-[60px] flex justify-center items-center flex-shrink-0 bg-[#0C3933]'>
-                                        <Image src={val.image} alt='image' className='w-[35px]' />
+                                    <div className='2xl:w-[80px] w-[70px] 2xl:h-[67px] h-[60px] flex justify-center items-center flex-shrink-0 bg-[#0C3933]'>
+                                        <Image src={val.image} alt='image' className='2xl:w-[40px] w-[35px]' />
                                     </div>
                                     <div>
-                                        <h1 className='text-[#231F20] text-lg font-semibold'>{val.title}</h1>
-                                        <p className='text-[#595A5A] text-sm mt-1'>{val.text}</p>
+                                        <h1 className='text-[#231F20] 2xl:text-xl text-lg font-semibold'>{val.title}</h1>
+                                        <p className='text-[#595A5A] 2xl:text-base text-sm mt-1'>{val.text}</p>
                                     </div>
                                 </div>
                             )
@@ -249,12 +249,12 @@ export default function Home() {
                         thirdData.map((val, index) => {
                             return (
                                 <div key={index} className='flex items-start gap-7'>
-                                    <div className='w-[70px] h-[60px] flex justify-center items-center flex-shrink-0 bg-[#0C3933]'>
-                                        <Image src={val.image} alt='image' className='w-[35px]' />
+                                    <div className='2xl:w-[80px] w-[70px] 2xl:h-[67px] h-[60px] flex justify-center items-center flex-shrink-0 bg-[#0C3933]'>
+                                        <Image src={val.image} alt='image' className='2xl:w-[40px] w-[35px]' />
                                     </div>
                                     <div>
-                                        <h1 className='text-[#231F20] text-lg font-semibold'>{val.title}</h1>
-                                        <p className='text-[#595A5A] text-sm mt-1'>{val.text}</p>
+                                        <h1 className='text-[#231F20] 2xl:text-xl text-lg font-semibold'>{val.title}</h1>
+                                        <p className='text-[#595A5A] 2xl:text-base text-sm mt-1'>{val.text}</p>
                                     </div>
                                 </div>
                             )
@@ -265,16 +265,16 @@ export default function Home() {
 
 
 
-            <div className={`xl:w-[1200px] w-[90%] m-auto my-32 ${open_sans.className}`}>
-                <h1 className='text-3xl text-[#231F20] font-bold text-center underline'>About Us</h1>
+            <div className={`2xl:w-[1500px] xl:w-[1300px] w-[90%] m-auto my-32 ${open_sans.className}`}>
+                <h1 className='2xl:text-4xl text-3xl text-[#231F20] font-bold text-center underline'>About Us</h1>
                 <div className='lg:flex block items-center gap-10 mt-14'>
                     <div className='lg:w-[55%] w-full'>
                         {
                             about.map((val, index) => {
                                 return (
                                     <div key={index} className='mb-7'>
-                                        <h1 className='text-xl text-[#231F20] font-semibold'>{val.title}</h1>
-                                        <p className='text-[#595A5A] text-sm mt-2'>{val.text}</p>
+                                        <h1 className='2xl:text-2xl text-xl text-[#231F20] font-semibold'>{val.title}</h1>
+                                        <p className='text-[#595A5A] 2xl:text-base text-sm mt-2'>{val.text}</p>
                                     </div>
                                 )
                             })
@@ -289,7 +289,7 @@ export default function Home() {
 
 
 
-            <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-5 xs:grid-cols-2 grid-cols-1 lg:gap-10 gap-5 md:mt-28 mt-10'>
+            <div className='2xl:w-[1500px] xl:w-[1300px] w-[90%] m-auto grid md:grid-cols-5 xs:grid-cols-2 grid-cols-1 lg:gap-10 gap-5 md:mt-28 mt-10'>
                 {
                     fifthData.map((val, index) => {
                         return (
@@ -297,38 +297,38 @@ export default function Home() {
                                 <div className='flex justify-center items-center'>
                                     {
                                         val.type === 'image' ?
-                                            <Image src={val.image} alt='image' className='w-[50px]' />
+                                            <Image src={val.image} alt='image' className='2xl:w-[60px] w-[50px]' />
                                             :
                                             val.image
                                     }
                                 </div>
-                                <h1 className='font-semibold mt-5 text-[#231F20] text-center'>{val.text}</h1>
+                                <h1 className='font-semibold mt-5 text-[#231F20] 2xl:text-lg text-center'>{val.text}</h1>
                             </div>
                         )
                     })
                 }
             </div>
-            <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-2 grid-cols-1 lg:gap-24 gap-7 md:mt-32 mt-20'>
+            <div className='2xl:w-[1500px] xl:w-[1300px] w-[90%] m-auto grid md:grid-cols-2 grid-cols-1 lg:gap-24 gap-7 md:mt-32 mt-20'>
                 {
                     AboutSecondData.map((val, index) => {
                         return (
-                            <div key={index} className={`py-5 px-8 bg-[#F9F9FA] box_shadow`}>
-                                <Image src={val.image} alt='image' className='w-[30px] drop_shadow' />
-                                <p className='text-[#595A5A] w-[80%] m-auto text-center'>{val.text}</p>
+                            <div key={index} className={`2xl:py-8 py-5 px-8 bg-[#F9F9FA] box_shadow`}>
+                                <Image src={val.image} alt='image' className='2xl:w-[37px] w-[30px] drop_shadow' />
+                                <p className='text-[#595A5A] w-[80%] m-auto 2xl:text-lg text-center'>{val.text}</p>
                             </div>
                         )
                     })
                 }
             </div>
-            <div className='xl:w-[1200px] w-[90%] m-auto grid md:grid-cols-2 grid-cols-1 lg:gap-14 gap-7 md:mt-15 mt-10'>
+            <div className='2xl:w-[1500px] xl:w-[1300px] w-[90%] m-auto grid md:grid-cols-2 grid-cols-1 lg:gap-14 gap-7 md:mt-15 mt-10'>
                 {
                     AboutThirdData.map((val, index) => {
                         return (
-                            <div key={index} className={`py-5 px-8 flex items-center`}>
-                                <Image src={val.image} alt='image' className='w-[100px] drop_shadow' />
+                            <div key={index} className={`2xl:py-8 py-5 px-8 flex items-center 2xl:gap-3`}>
+                                <Image src={val.image} alt='image' className='2xl:w-[130px] w-[100px] drop_shadow' />
                                 <div className='w-[150px]'>
-                                    <p className='text-[#231F20] font-semibold w-[80%] m-auto text-center'>{val.name}</p>
-                                    <p className='text-[#595A5A] w-[80%] m-auto text-center'>{val.profession}</p>
+                                    <p className='text-[#231F20] font-semibold w-[80%] m-auto 2xl:text-lg text-center'>{val.name}</p>
+                                    <p className='text-[#595A5A] w-[80%] m-auto 2xl:text-lg text-center'>{val.profession}</p>
                                 </div>
                             </div>
                         )
