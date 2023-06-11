@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Svg1 from '../../public/images/bg.svg'
 import Mobile1 from '../../public/images/mobile1.png'
 import Mobile2 from '../../public/images/mobile2.png'
+import Mobile3 from '../../public/images/mobile3.png'
 import first1 from '../../public/images/1/1-1.svg'
 import first2 from '../../public/images/1/1-2.svg'
 import first3 from '../../public/images/1/1-3.svg'
@@ -23,7 +24,6 @@ import fifth4 from '../../public/images/5/5-4.png'
 import fifth5 from '../../public/images/5/5-5.png'
 import Comma from '../../public/images/comma.png'
 import Man from '../../public/images/man.svg'
-import Link from 'next/link'
 import localFont from 'next/font/local';
 import Header from '@/components/header'
 
@@ -85,7 +85,7 @@ const thirdData = [
     {
         image: third2,
         title: 'Qatapolt News',
-        text: 'Keep track of our news page to stay in the loop for our latest updates for the Qatapolt Community.'
+        text: 'Keep track of our news page to stay in the loop for all the latest updates for the Qatapolt Community.'
     },
     {
         image: third3,
@@ -99,7 +99,7 @@ const thirdData = [
 const about = [
     {
         title: 'Executive Summary',
-        text: 'Qatapolt is a social media app that is truly dedicated to turning dreams into reality within sport. Athletes will be able to put themselves in the “shop window” on Qatapolt in a similar fashion to Justin Bieber launching a successful music career with the aid of YouTube. Prior to global success, Mo Salah would travel for 9 hours to get to training and Sadio Mane took a secret flight to France to attend a trial. This would all be eradicated with Qatapolt.'
+        text: 'Qatapolt is a social media app that is truly dedicated to turning dreams into reality within sport. Athletes will be able to put themselves in the “shop window” on Qatapolt in a similar fashion to Justin Bieber launching a successful music career with the aid of YouTube. Prior to global success, Mo Salah would travel for 9 hours to get to training and Sadio Mane took a secret flight to France to attend a trial. This would all be streamlined with Qatapolt.'
     },
     {
         title: 'Objectives ',
@@ -157,18 +157,18 @@ const AboutSecondData = [
 ]
 
 
-const AboutThirdData = [
-    {
-        image: Man,
-        name: 'Waqas Abbas',
-        profession: 'Designer'
-    },
-    {
-        image: Man,
-        name: 'Umair Abbas',
-        profession: 'Developer'
-    },
-]
+// const AboutThirdData = [
+//     {
+//         image: Man,
+//         name: 'Waqas Abbas',
+//         profession: 'Designer'
+//     },
+//     {
+//         image: Man,
+//         name: 'Umair Abbas',
+//         profession: 'Developer'
+//     },
+// ]
 
 export default function Home() {
     return (
@@ -202,8 +202,8 @@ export default function Home() {
                 </div>
             </div>
             <div className='2xl:w-[1500px] xl:w-[1300px] w-[90%] m-auto md:mt-20 mt-10'>
-                <div className={`md:w-[70%] xs:w-[90%] mx-auto w-full xs:flex block border-8 border-[#517570] mt-10`}>
-                    <input type="text" placeholder='Enter your email address' className='text-[#1C2824] border border-zinc-300 placeholder:text-[#1C2824] placeholder:font-semibold xs:py-5 py-3 px-5 flex-grow w-full' />
+                <div className={`md:w-[70%] xs:w-[90%] mx-auto w-full xs:flex block border-[5px] border-[#517570] mt-10`}>
+                    <input type="text" placeholder='Enter your email address' className='text-[#1C2824] border border-zinc-300 xs:py-5 py-3 px-5 flex-grow w-full' />
                     <button className={`linearGradient xs:mt-0 mt-3 xs:py-5 py-3 xs:w-[200px] w-full text-white`}>SUBSCRIBE</button>
                 </div>
             </div>
@@ -281,7 +281,7 @@ export default function Home() {
                         }
                     </div>
                     <div className='w-[45%] lg:flex hidden justify-center'>
-                        <Image src={Mobile1} alt='image' className='w-[60%]' />
+                        <Image src={Mobile3} alt='image' className='w-[60%]' />
                     </div>
                 </div>
             </div>
@@ -308,6 +308,8 @@ export default function Home() {
                     })
                 }
             </div>
+
+
             <div className='2xl:w-[1500px] xl:w-[1300px] w-[90%] m-auto grid md:grid-cols-2 grid-cols-1 lg:gap-24 gap-7 md:mt-32 mt-20'>
                 {
                     AboutSecondData.map((val, index) => {
@@ -320,7 +322,7 @@ export default function Home() {
                     })
                 }
             </div>
-            <div className='2xl:w-[1500px] xl:w-[1300px] w-[90%] m-auto grid md:grid-cols-2 grid-cols-1 lg:gap-14 gap-7 md:mt-15 mt-10'>
+            {/* <div className='2xl:w-[1500px] xl:w-[1300px] w-[90%] m-auto grid md:grid-cols-2 grid-cols-1 lg:gap-14 gap-7 md:mt-15 mt-10'>
                 {
                     AboutThirdData.map((val, index) => {
                         return (
@@ -334,7 +336,7 @@ export default function Home() {
                         )
                     })
                 }
-            </div>
+            </div> */}
         </div>
     )
 }
